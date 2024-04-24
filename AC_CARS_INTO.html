@@ -1,0 +1,1298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" type="image/x-icon" href="ac.png">
+
+    <title> AC cars  </title>
+
+</head>
+
+<style>
+
+
+body{
+    background-color: #eee;
+    position: relative;
+}
+
+header{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    background-color: white;
+    margin: 0px;
+}
+
+
+.mainp{
+    text-align: center;
+}
+
+.mainp p{
+    font-size: 30px;
+
+}
+
+input{
+    display: none;
+}
+
+label{
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+    padding: 3px;
+    caret-color: transparent;
+}
+
+label::selection{
+    background-color: white;
+}
+
+.cars .DBMW,
+.cars .DMAR,
+.cars .DNIS,
+.cars .DTOY,
+.cars .DPOR{
+    display: none;
+    background-color: white;
+    margin-bottom: 100px;
+}
+
+.cars .DMAR,
+.cars .DNIS,
+.cars .DTOY,
+.cars .DPOR{
+    border-top: 1.5px solid black;
+}
+
+label{
+    margin-top: 10px;
+}
+
+input[class = "bmw"]:checked + div[class = "DBMW"]{
+    display: block;
+}
+input[class = "mar"]:checked + div[class = "DMAR"]{
+    display: block;
+}
+input[class = "nis"]:checked + div[class = "DNIS"]{
+    display: block;
+}
+input[class = "toy"]:checked + div[class = "DTOY"]{
+    display: block;
+}
+input[class = "por"]:checked + div[class = "DPOR"]{
+    display: block;
+}
+
+input[class = "DARK"]:checked ~ .section .selection label{
+    color: white;
+} 
+
+input[class = "DARK"]:checked + header,  
+input[class = "DARK"]:checked ~ .section,  
+input[class = "DARK"]:checked ~ hr,  
+input[class = "DARK"]:checked ~ .section .selection,  
+input[class = "DARK"]:checked ~ .section .cars .DBMW,  
+input[class = "DARK"]:checked ~ .section .cars .DMAR,  
+input[class = "DARK"]:checked ~ .section .cars .DNIS,  
+input[class = "DARK"]:checked ~ .section .cars .DTOY,  
+input[class = "DARK"]:checked ~ .section .cars a,  
+input[class = "DARK"]:checked ~ .section .cars .DPOR{
+    background-color: rgb(33 31 31);
+    color: white;
+    border-color: white;
+}
+
+p[class *=P]{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 29px;
+    text-decoration: underline;
+}
+h3{
+    margin-left: 57px;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 10px;
+}
+.h310::before{
+    content: "10";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h39::before{
+    content: "9";
+    background-color: red;
+    padding: 8px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 26px;
+    color: white;
+}
+.h38::before{
+    content: "8";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h37::before{
+    content: "7";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h36::before{
+    content: "6";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h35::before{
+    content: "5";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h34::before{
+    content: "4";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h33::before{
+    content: "3";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h32::before{
+    content: "2";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h31::before{
+    content: "1";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+
+div [class*= MAIN]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 10px;
+}
+
+.cars img{
+    width: 48%;
+    border: 0.1px solid transparent;
+    border-radius: 30px;
+}
+
+p[class*=p]{
+    flex-basis: 48%;
+    font-size: 25px;
+}
+
+a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.img{
+    background-image: url(ac.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+}
+
+input[class = "DARK"]:checked + header .img{
+    background-image: url(ac2.jpg);
+}
+
+body:has(input[class = "DARK"]:checked){
+    background-color: black;
+}
+
+.selection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lDARK{
+    margin-right: 30px;
+}
+
+#chkb:checked + label{
+    color: red;
+}
+
+p::selection{
+    color: white;
+    background-color: black;
+}
+
+input[class = "DARK"]:checked ~ p::selection,
+input[class = "DARK"]:checked ~ .section p::selection,
+input[class = "DARK"]:checked ~ .section .selection p::selection,
+input[class = "DARK"]:checked ~ .section .cars p::selection{
+    color: black;
+    background-color: white;
+}
+
+.up{
+
+position: fixed;
+bottom: 15px;
+right: 15px;
+margin: 0px;
+padding: 10px;
+background-color: rgba(95, 95, 241, 0.5);
+color: white;
+font-weight: bold;
+cursor: pointer;
+font-size: 25px;
+caret-color: transparent;
+}
+
+.up:hover{
+
+    background-color:rgba(95, 95, 241) ;
+    transition: .5s;
+}
+
+
+@media (max-width : 1000px) {
+
+    .up{
+
+        font-size: 40px;
+    }
+}
+
+</style>
+
+
+
+
+<body>
+    <div class="dark">
+        <input type="checkbox" class="DARK" id="CDARK" name="DARK" onclick="td();  ">
+    <header>
+
+        
+
+        <div class="img"></div>
+        <label for="CDARK" class="lDARK" id="lDARK">DARK</label>
+    </header>
+    
+
+    <div class="section">
+
+        <div class="mainp">
+        <p>with <strong>AC</strong> website u can know the best cars of the last decade for many different car brands like BMW , Mercedes , Nissan , and many more. </p>
+        </div>
+
+        <hr>
+
+    <div class="selection">
+
+
+            
+    
+    <label  class="BMW" id="lBMW" onclick="colorB(); toggle(); " >BMW</label>
+
+    
+    <label  class="MAR" id="lMAR" onclick="colorM(); togglem();" >Mercedes</label>
+
+    
+    <label  class="NIS" id="lNIS" onclick="colorN(); togglen();" >Nissan</label>
+    
+   
+    <label  class="TOY" id="lTOY" onclick="colorT(); togglet();">Toyota</label>
+    
+    
+    <label  class="POR" id="lPOR" onclick="colorP(); togglep();">Porsche</label>
+            
+    
+        
+    </div>
+    <br> 
+    <hr>
+
+    <div class="cars">
+        <form action="">
+        <input type="radio" class="bmw" value="BMW" name="cr" id="BMW" ch  >
+    <div class="DBMW">
+
+        <h2>BMW</h2>
+
+        <p class="BMWP"> BMW is one of those rare car companies whose vehicles serve as a powerful statement and status symbol. 
+        It has earned this reputation of brilliance and reliability through decades of providing some of the most desirable and robust models in automotive history.
+        <br> <br>
+        there is 10 of the best BMW cars of these decade:
+        </p>
+
+        <div class="bmw10">
+            <div class="BMW_X7">
+                <h3 class="h310">BMW X7</h3>
+                <div class="BMW_X7_MAIN">
+                    <img class="BMW_X7img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/X7.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW X7">
+                    <p class="BMW_X7p"> We had to wait until last year for BMW to unveil their answer to all those full-size SUVs such as the Audi Q7, Lincoln Navigator, or the G-Class. 
+                        Yet, the X7 was definitely worth the wait, 
+                        as the model now sits near the top of its segment, featuring some of the best luxury features paired with a powerful engine... <a href="AC_cars_mainBMW.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_M5_Competition">
+                <h3 class="h39">BMW M5 Competition</h3>
+                <div class="BMW_M5_Competition_MAIN">
+                    <img class="BMW_M5_Competitionimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/M5-Competition.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW M5 Competition">
+                    <p class="BMW_M5_Competitionp"> To make this incredible sports car, BMW took one of the greatest midsize sedans on the market -
+                         the 5-series - and fitted it with a beastly 4.4L V8 producing 617 horsepower. With such raw power coming from the engine, 
+                        it no longer connected to just the rear wheels but all four wheels instead... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_8-Series">
+                <h3 class="h38">BMW 8-Series</h3>
+                <div class="BMW_8-Series_MAIN">
+                    <img class="BMW_8-Seriesimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/8-series.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW 8-Series">
+                    <p class="BMW_8-Seriesp"> Hands down one of the best cars BMW delivered in the last decade,
+                        the majestic 8-Series is the long-awaited successor to the legendary 850CSI model discontinued in 1999.
+                        The car's performance, looks, and upscale experience made it one of the best grand tourers in the '90s,
+                        and we're ecstatic to say the new 8-Series is even better... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_Z4">
+                <h3 class="h37">BMW Z4</h3>
+                <div class="BMW_Z4_MAIN">
+                    <img class="BMW_Z4img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/Z4.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW Z4">
+                    <p class="BMW_Z4p"> The Z4 has been around for a while now, replacing the obsolete Z3 in 2002. The model paused production in 2016,
+                     offering up 335 horsepower under the hood at the time. However, the Z4's back for 2019 model year... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_i8">
+                <h3 class="h36">BMW i8</h3>
+                <div class="BMW_i8_MAIN">
+                    <img class="BMW_i8img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/i8.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW i8">
+                    <p class="BMW_i8p">As the brand's first hybrid supercar, the i8 denoted a shift in perspective for BMW when it debuted in 2014. Both in design and performance,
+                     the car draws inspiration from the legendary mid-engine BMW M1... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_1-Series_M_Coupe">
+                <h3 class="h35">BMW 1-Series M Coupe</h3>
+                <div class="BMW_1-Series_M_Coupe_MAIN">
+                    <img class="BMW_1-Series_M_Coupeimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/1-series-M-coupe.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW 1-Series M Coupe">
+                    <p class="BMW_1-Series_M_Coupep"> Launched in 2010, the 1-Series M Coupe was a promising start to the decade for BMW. This is the car nobody knew they wanted until BMW actually made it.
+                        It's essentially a high-performance model of their sub-compact 1-series... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_M3_E92">
+                <h3 class="h34">BMW M3 E92</h3>
+                <div class="BMW_M3_E92_MAIN">
+                    <img class="BMW_M3_E92img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/m3.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW M3 E92">
+                    <p class="BMW_M3_E92p"> It's difficult to find a car enthusiast that doesn't admire the simple brilliance and appeal of the M3.
+                     Pop culture made the E46 one of the most popular and desirable German sports cars in the world, and the E92 facelift only continued the trend.
+                     Aside from the exterior of a stylish sedan that suggests that this car might be more competent than it looks... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_4-Series">
+                <h3 class="h33">BMW 4-Series</h3>
+                <div class="BMW_4-Series_MAIN">
+                    <img class="BMW_4-Seriesimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/M4.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW 4-Series">
+                    <p class="BMW_4-Seriesp"> In 2013, BMW figured a sporty 3-Series coupe deserved to have its own line, and so the 4-series was born.
+                     And it was just one of the great ideas BMW would have the following decade.
+                     The car effectively competes against the likes of the Audi A5 and the Mercedes C-series coupe... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_X1">
+                <h3 class="h32">BMW X1</h3>
+                <div class="BMW_X1_MAIN">
+                    <img class="BMW_X1img" src="X1.jpg" alt="BMW X1">
+                    <p class="BMW_X1p"> At a $35,000 starting price point, the X1 is the luxury SUV for those who want the BMW experience without the spaciousness of a larger SUV.
+                     And it manages to fill this gap perfectly, 
+                    currently sitting at the very top of the sub-compact luxury SUV segment. And it's been doing this since 2013.... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_7-Series">
+                <h3 class="h31">BMW 7-Series</h3>
+                <div class="BMW_7-Series_MAIN">
+                    <img class="BMW_7-Seriesimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/7-series.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW 7-Series">
+                    <p class="BMW_7-Seriesp"> The company's flagship super luxury sedan has kept its elite status for the entire past decade,
+                     competing with the greatest cars in its segment such as the Mercedes-Benz S class and Jaguar XJ,
+                     even giving land yachts like Bentley a run for their money.... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+                
+            </div>
+
+    </div>
+            
+        
+        
+    <input type="radio" class="mar" value="MAR" name="cr" id="MAR" >
+    <div class="DMAR">
+        <h2>Mercedes</h2>
+
+        <p class="MARP"> Mercedes-Benz is the kind of company that doesn't even have to boast the fact that it traces its roots to the very first car ever made (the Benz-Patent Motorwagen),
+             its immense market share and consumer image speak for themselves. At one point or another,
+             you've surely heard this brand's name used as a synonym for luxury and high status.
+        <br> <br>
+        there is 10 of the best marcedes cars of these decade:
+        </p>
+
+        <div class="MAR10">
+
+                <div class="2020-Present_Mercedes-Benz_EQC">
+                    <h3 class="h310">2020-Present Mercedes-Benz EQC</h3>
+                    <div class="2020-Present_Mercedes-Benz_EQC_MAIN">
+                        <img class="2020-Present_Mercedes-Benz_EQCimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2021/10/Mercedes-Benz-EQC-1-Cropped.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2020-Present Mercedes-Benz EQC">
+                        <p class="2020-Mercedes-Benz_EQCp"> In 2019, Mercedes debuted their entry into the EV market with the all-new EQ lineup. 
+                        The EQC is a fully electric SUV that runs on an 80 kWh lithium-ion battery pack connected to two electric motors producing 402 horsepower 
+                        more than enough to pull the weight of the 5,350-lb luxury SUV.... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="2022-Present_Mercedes-AMG_SL-Class">
+                    <h3 class="h39">2022-Present Mercedes-AMG SL-Class</h3>
+                    <div class="2022-Present_Mercedes-AMG_SL-Class_MAIN">
+                        <img class="2022-Present_Mercedes-AMG_SL-Classimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2021/12/2022-Mercedes-AMG-SL-Class-Via-DaimlerMedia-(7).jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2022-Present Mercedes-AMG SL-Class">
+                        <p class="2022-Mercedes-AMG_SL-Classp"> In 2022, Mercedes-Benz introduced the seventh and latest generation of their luxury sports convertible lineup,
+                             branded the SL-Class. For the first time ever, the new SL is a Mercedes-AMG exclusive and will no longer be a part of Mercedes-Benz's standard lineup.
+                             The new SL is also the first to offer 2+2 seating as the standard configuration,
+                             though the rear seating area doesn't offer much space for taller people.... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="2023_Mercedes-AMG_C_63_S_Coupe">
+                    <h3 class="h38">2023 Mercedes-AMG C 63 S Coupe</h3>
+                    <div class="2023_Mercedes-AMG_C_63_S_Coupe_MAIN">
+                        <img class="2023_Mercedes-AMG_C_63_S_Coupeimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2023/03/2023-mercedes-amg-c63-coupe-copy.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2023 Mercedes-AMG C 63 S Coupe">
+                        <p class="2023_Mercedes-AMG_C_63_S_Coupep"> The C-Class sedan is doing wonderfully on the market, competing for the top spot in the luxury compact sedan segment with the likes of the
+                             Audi A4 and Genesis G70. However,
+                             it's the special C 63 AMG coupe variant that we'd like to give special attention to.... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+    
+    
+                <div class="2022_Mercedes-Benz_A-Class_Sedan">
+                    <h3 class="h37">2022 Mercedes-Benz A-Class Sedan</h3>
+                    <div class="2022_Mercedes-Benz_A-Class_Sedan_MAIN">
+                        <img class="2022_Mercedes-Benz_A-Class_Sedanimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2022/09/Mercedes-Benz-A-Class_Sedan.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2022 Mercedes-Benz A-Class Sedan">
+                        <p class="2022_Mercedes-Benz_A-Class_Sedanp">In 2018, Mercedes-Benz decided to offer the already appealing luxury sub-compact A-Class in an all-new sedan version.
+                             The A-Class sedan seems to be an excellent decision by Mercedes. While it still competes in the same segment, 
+                             the A-Class sedan now offers an impressive 15.1 cubic-foot rear storage area, 
+                            as well as more room in the front and back seats.... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="2019-2021_Mercedes-AMG_GT_63_S">
+                    <h3 class="h36">2019-2021 Mercedes-AMG GT 63 S</h3>
+                    <div class="2019-2021_Mercedes-AMG_GT_63_S_MAIN">
+                        <img class="2019-2021_Mercedes-AMG_GT_63_Simg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/11/Mercedes-AMG-GT-63-S-Nurburgring-quarter-front.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2019-2021 Mercedes-AMG GT 63 S">
+                        <p class="2019-2021_Mercedes-AMG_GT_63_Sp"> There's the Mercedes-Benz AMG GT, and then there's this – an all-out luxury sedan with the performance of a supercar. The AMG GT 63 S counts itself among the few very fast four-door sports sedans in the world. 
+                            It's a notable achievement by Mercedes that tests the limits of just how far a luxury sedan can go.... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="2023_Mercedes-AMG_One">
+                    <h3 class="h35">2023 Mercedes-AMG One</h3>
+                    <div class="2023_Mercedes-AMG_One_MAIN">
+                        <img class="2023_Mercedes-AMG_Oneimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2022/11/Mercedes-AMG-ONE.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2023 Mercedes-AMG One">
+                        <p class="2023_Mercedes-AMG_Onep"> Red Bull is currently dominating the F1 racing world, but Mercedes-Benz has been on top for most of the last decade. 
+                            To celebrate its F1 championships, Mercedes-Benz unveiled a new hybrid supercar in 2017 and started producing it five years later. 
+                            Dubbed the Mercedes-AMG One, it's one of the most exciting German cars of the last decade.... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="2022-Present_Mercedes-Benz_EQS">
+                    <h3 class="h34"> 2022-Present Mercedes-Benz EQS</h3>
+                    <div class="2022-Present_Mercedes-Benz_EQS_MAIN">
+                        <img class="2022-Present_Mercedes-Benz_EQSimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2022/10/Screenshot-2022-10-19-at-73643-PM.png?q=50&fit=crop&w=750&dpr=1.5" alt="2022-Present Mercedes-Benz EQS">
+                        <p class="2022_Mercedes-Benz_EQSp"> It took Mercedes-Benz a while to join the fast-growing electric vehicle market, but since it launched the EQ range of EVs, 
+                        it has shown why it's an automotive giant. 
+                        We love the aforementioned EQC as it was the automaker's first EV, but the car that shows Mercedes-Benz's intent to take over the EV space is the EQS.... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="2023_Mercedes-Benz_C-Class">
+                    <h3 class="h33">2023 Mercedes-Benz C-Class</h3>
+                    <div class=2023_Mercedes-Benz_C-Class_MAIN">
+                        <img class="2023_Mercedes-Benz_C-Classimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2022/09/Mercedes-Benz-C-Class-2022-1024-08.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2023 Mercedes-Benz C-Class">
+                        <p class="2023_Mercedes-Benz_C-Classp">Most gearheads dream of owning a Mercedes-Benz, particularly the S-Class. However,
+                             Mercedes-Benz knows its prices can be restrictive for budget-minded gearheads, which is why the C-Class exists.... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="2014-Present_Mercedes-Benz_G63_AMG_6x6">
+                    <h3 class="h32">2014-Present Mercedes-Benz G63 AMG 6x6</h3>
+                    <div class="2014-Present_Mercedes-Benz_G63_AMG_6x6_MAIN">
+                        <img class="2014-Present_Mercedes-Benz_G63_AMG_6x6img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2022/12/mercedes-benz-g63_amg_6x6_feature-1.jpeg?q=50&fit=crop&w=750&dpr=1.5" alt="2014-Present Mercedes-Benz G63 AMG 6x6">
+                        <p class="2014-Mercedes-Benz_G63_AMG_6x6p"> When it comes to off-road vehicles, Mercedes-Benz isn't the first automaker that comes to mind. However, 
+                            the mighty G63 AMG 6x6 proves that Mercedes-Benz could also build a proper off-roader if it wanted to..... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="2023_Mercedes-Maybach_S-Class">
+                    <h3 class="h31">2023 Mercedes-Maybach S-Class</h3>
+                    <div class="2023_Mercedes-Maybach_S-Class_MAIN">
+                        <img class="2023_Mercedes-Maybach_S-Classimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2022/06/2022-Mercedes-Maybach-S-Class-2-2.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2023 Mercedes-Maybach S-Class">
+                        <p class="2023_Mercedes-Maybach_S-Classp"> The aforementioned S-Class is already one of the top luxury car models. However,
+                             it can't really compete with the Rolls-Royce Phantom for the title of the most luxurious sedan,
+                             which is why Mercedes-Benz's luxury division Maybach builds its own version..... <a href="uc.html">see more</a>
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <input type="radio" class="nis" value="NIS" name="cr" id="NIS" >
+    <div class="DNIS">
+
+        <h2>Nissan</h2>
+
+        <p class="NISP"> Nissan has come a long way from its old Datsun days; today, 
+         it’s the proud manufacturer of the Nissan Altima, which is perhaps one of the best mid-sized sedans in the U.S.
+         Let’s not forget the thundering Japanese super-car slayer, the Nissan GT-R, aka Godzilla, a 565-hp track monster. 
+         Nissan has everything a car owner could want, from the humble Nissan Leaf to the off-road never changing Nissan Frontier.
+        <br> <br>
+        there is 10 of the best Nissan cars of these decade:
+        </p>
+
+        <div class="NIS10">
+
+            <div class="2020_Nissan_Frontier">
+                <h3 class="h310">2020 Nissan Frontier</h3>
+                <div class="2020_Nissan_Frontier_MAIN">
+                    <img class="2020_Nissan_Frontierimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/12/2020-Nissan-Frontier.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2020 Nissan Frontier">
+                    <p class="2020_Nissan_Frontierp"> Let’s face it; the 2020 Nissan Frontier is a fossil; however, 
+                        this mid-size pick-up truck is still a workhorse. Unlike its full-size sibling, the Titan, the Frontier remains unchanged since it first debuted in 2015.
+                         Some of the tiny details that make this mid-size pickup truck likable are its configurable cargo box,
+                         as well as a durable interior, and well, of course, its affordable starting price..... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2019_Nissan_GT-R">
+                <h3 class="h39">2019 Nissan GT-R</h3>
+                <div class="2019_Nissan_GT-R_MAIN">
+                    <img class="2019_Nissan_GT-Rimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/12/2019-Nissan-GT-R.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2019 Nissan GT-R">
+                    <p class="2019_Nissan_GT-Rp"> Long live the King! It doesn’t matter what you call it, Godzilla, 
+                        Nismo GT-R, or just GT-R. The Nissan GT-R is the prized baby of Nissan, a supercar slayer, with a stomping high-tech engine.
+                         There’s a reason why the Japanese track king gets its name;
+                         Godzilla and part of it are because it's been tearing up racing tracks since 1969..... <a href="AC_CARS_mainnis.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2018_Nissan_Titan_XD">
+                <h3 class="h38">2018 Nissan Titan XD</h3>
+                <div class="2018_Nissan_Titan_XD_MAIN">
+                    <img class="2018_Nissan_Titan_XDimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/12/2018-Nissan-Titan-XD.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2018 Nissan Titan XD">
+                    <p class="2018_Nissan_Titan_XDp">Not a lot of people are crazy about this car; however,
+                        this pick-up truck sits between the regular and heavy-duty trucks on the workhorse spectrum without really hitting the mark. Compared to the Ford F-150 or Chevrolet Silverado, 
+                       the Titan XD performs poorly when it comes to payload and towing capability.... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="2019_Nissan_Pathfinder">
+                <h3 class="h37">2019 Nissan pathfinder</h3>
+                <div class="2019_Nissan_Pathfinder_MAIN">
+                    <img class="2019_Nissan_Pathfinderimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/12/2019-Nissan-Pathfinder.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2019 Nissan Pathfinder">
+                    <p class="2019_Nissan_pathfinderp">If you were to come up with a blend of modern three-row crossovers in a single concoction,
+                         then the 2019 Nissan Pathfinder will be your choice. While you get an off-road vibe with its nameplate, 
+                        the current Nissan Pathfinder is a tame family-friendly SUV with seven seats, unlike the original, which was a truck-based four-wheel sport utility vehicle..... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2019_Nissan_Juke_RS">
+                <h3 class="h36">2019 Nissan Juke RS</h3>
+                <div class="2019_Nissan_Juke_RS_MAIN">
+                    <img class="2019_Nissan_Juke_RSimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/12/2019-Nissan-Juke-RS.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2019 Nissan Juke RS">
+                    <p class="2019_Nissan_Juke_RSp"> The standard Juke gets a lot of hate from the car community due to its distinct, peculiar looks,
+                         but the Juke Nismo RS elicits a different reaction – fear! It’s a surge of insanity into the already cheeky juke, 
+                        a sort of bad joke to all the internet trolls and haters alike..... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="Nissan_Rogue">
+                <h3 class="h35">Nissan Rogue</h3>
+                <div class="Nissan_Rogue_MAIN">
+                    <img class="Nissan_Rogueimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/09/7-Nissan-Rogue.png?q=50&fit=crop&w=750&dpr=1.5" alt="Nissan Rogue">
+                    <p class="Nissan_Roguep"> The Nissan Rogue is a small but decent crossover SUV. If you are a beginner and looking for a decent car, this should be a contender.
+                         The Rogue has pretty advanced driver assistance technology, including Nissan’s ProPILOT semi-automated driving features.... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2019_Nissan_Murano">
+                <h3 class="h34"> 2019 Nissan Murano</h3>
+                <div class="2019_Nissan_Murano_MAIN">
+                    <img class="2019_Nissan_Muranoimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/12/2019-Nissan-Murano.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2019 Nissan Murano">
+                    <p class="2019_Nissan_Muranop"> Nissan Murano has been a standout vehicle ever since it first debuted in early 2000, 
+                    and claimed a stake between premium and non-premium SUVs offering a refined ride quality and standout styling with a well-appointed interior..... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2019_Nissan_Maxima">
+                <h3 class="h33">2019 Nissan Maxima</h3>
+                <div class="2019_Nissan_Maxima_MAIN">
+                    <img class="2019_Nissan_Maximaimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/12/Nissan-Maxima.jpeg?q=50&fit=crop&w=750&dpr=1.5" alt="2019 Nissan Maxima">
+                    <p class="2019_Nissan_Maximap">The 2019 Nissan Maxima is a well-rounded full-size sedan with enough comfort to attract a luxury car buyer,
+                         brute athleticism to keep adrenaline off-roaders engaged, and enough gadgetry to get respect from tech connoisseurs. 
+                    It offers quite the sports car profile with a visual punch enough to attract attention..... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2018_Nissan_Kicks">
+                <h3 class="h32">2018 Nissan Kicks</h3>
+                <div class="2018_Nissan_Kicks_MAIN">
+                    <img class="2018_Nissan_Kicksimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/12/2018-Nissan-Kicks.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2018 Nissan Kicks">
+                    <p class="2018_Nissan_Kicksp">The Nissan Kicks is perfect for prospective buyers looking for a switch from a subcompact sedan to a subcompact crossover.
+                         However, don’t get fooled by its tiny dimensions, the Kicks is amazingly practical.
+                         It comes with a pocket-friendly price tag with a big back seat and plenty of room to hold cargo at the back...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2020_Nissan_Altima">
+                <h3 class="h31">2020 Nissan Altima</h3>
+                <div class="2020_Nissan_Altima_MAIN">
+                    <img class="2020_Nissan_Altimaimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/12/2020-Nissan-Altima.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2020 Nissan Altima">
+                    <p class="2020_Nissan_Altimap"> The 2020 Nissan Altima is quite an appealing mid-size sedan with all the comfort and features families like as well as exclusive content that can 
+                        not be found elsewhere in its class. The Altima offers a spacious cabin with contemporary tech and is perhaps the only sedan in its class with an optional all-wheel-drive variant. 
+                        The Altima comes with a cutting-edge engine known as the VC-Turbo that aims to maximize both fuel economy and performance...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <input type="radio" class="toy" value="TOY" name="cr" id="TOY" >
+    <div class="DTOY">
+
+        <h2>Toyota</h2>
+
+        <p class="TOYP"> What can be said about Toyota models? Well, for starters that there are several distinct types,
+             from the Toyota 86 to the Toyota RAV4. Many of these models being praised for fuel-efficiency, and four-wheel drive, which is a must want attribute. As well, 
+            Toyota is one of the most credible car makers that deliver high-principled vehicles.
+        <br> <br>
+        there is 10 of the best Toyota cars of these decade:
+        </p>
+
+        <div class="NIS10">
+
+            <div class="2019_Toyota_RAV4_Hybrid">
+                <h3 class="h310">2019 Toyota RAV4 Hybrid</h3>
+                <div class="2019_Toyota_RAV4_Hybrid_MAIN">
+                    <img class="2019_Toyota_RAV4_Hybridimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/2019-toyota-rav4_100679911_h.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2019 Toyota RAV4 Hybrid">
+                    <p class="2019_Toyota_RAV4_Hybridp"> The 2019 Toyota RAV4 Hybrid is powerful, versatile, and suitable for younger and older generations. 
+                        the 2019 Toyota RAV4 Hybrid is equipped with a best-class fuel-economy, 
+                        contains ample passenger space, and is a highly reliable vehicle. This explains why it meets the expectations of many drivers...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="Toyota_prius">
+                <h3 class="h39">Toyota Prius</h3>
+                <div class="Toyota_prius_MAIN">
+                    <img class="Toyota_priusimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/2016_2018_Toyota_Prius_Four_Touring_002_BBA97E693656E49B617B73A7E43ED49D6F613888-1500x1001.jpg?q=50&fit=crop&w=750&dpr=1.5" alt=" 2018 Toyota Prius">
+                    <p class="Toyota_priusp">If you're looking for all-around efficiency and eco-friendly driving without the headache of having to plug in your car,
+                         the 2018 Toyota Prius is the right fit for you.
+                         The interior of the Prius is both practical and spacious as it accounts for plenty of cargo space...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2019_Toyota_Mirai">
+                <h3 class="h38">2019 Toyota Mirai</h3>
+                <div class="2019_Toyota_Mirai_MAIN">
+                    <img class="2019_Toyota_Miraiimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/toyota_100725518.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2019 Toyota Mirai">
+                    <p class="2019_Toyota_Miraip">If you've ever wondered where the Toyota Mirai got its name from you are about to find out. 
+                        "Mirai" which means "future" in Japanese. The Toyota Mirai has been distinguished as the forthcoming of car culture. In addition, 
+                        the style and design of the car appears to look futuristic. It is currently only available in Japan, Europe, and California..... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="2020_TOYOTA_MR2">
+                <h3 class="h37">2020 TOYOTA MR2</h3>
+                <div class="2020_TOYOTA_MR2_MAIN">
+                    <img class="2020_TOYOTA_MR2img" src="https://spirotours.com/wp-content/uploads/2019/04/new-toyota-mr2-concept-2020-pictures-engine-cost-price-730x411.jpg" alt="2020 TOYOTA MR2">
+                    <p class="2020_TOYOTA_MR2p">The MR2 was a roadster built by Toyota in three very different models with the last one being made back in 2007.
+                         Since then Toyota released the GT86 which replaced the MR2 at the same price point but it didn’t really manage to offer the thrills provided by its predecessor.
+                          Well, it seems things are about to change as not that long ago a Toyota official said they might be working on a future 2023 Toyota MR2.
+                         So far there is still little information available but things do seem quite promising...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2020_Toyota_Tundra">
+                <h3 class="h36">2020 Toyota Tundra</h3>
+                <div class="2020_Toyota_Tundra_MAIN">
+                    <img class="2020_Toyota_Tundraimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/388757_2020_Toyota_Tundra.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2020 Toyota Tundra">
+                    <p class="2020_Toyota_Tundrap"> People like trucks mainly because they provide the capability to haul stuff and especially if you live in an area with harsh weather conditions, it will be useful for driving in the snow.
+                        When you think of the Toyota Tundra you ought to think toughness, durability, and resilience. The benefit of being able to drive off-road with this 
+                        vehicle makes it the standard for pick-up trucks. According to the Car and Driver, "The Tundra offers a potent and proven V-8 engine and a stylized 
+                        TRD Pro model."..... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="The_2012_Toyota_Avalon">
+                <h3 class="h35">The 2012 Toyota Avalon</h3>
+                <div class="The_2012_Toyota_Avalon_MAIN">
+                    <img class="The_2012_Toyota_Avalonimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/toyota-avalon-2012.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="The 2012 Toyota Avalon">
+                    <p class="The_2012_Toyota_Avalonp"> The Toyota Avalon has been marked as one of the most durable cars of the decade. It is a comfortable ride with good fuel economy.
+                         It includes a moonroof, 
+                         a rearview camera, dual-zone automatic climate control, leather upholstery, and a power-adjustable driver's seat..... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class=" 2018_Toyota_Camry_Hybrid">
+                <h3 class="h34"> 2018 Toyota Camry Hybrid</h3>
+                <div class="2018_Toyota_Camry_Hybrid_MAIN">
+                    <img class="2018_Toyota_Camry_Hybridimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/1078702682_5477921144001_5477861737001-vs.jpg?q=50&fit=crop&w=750&dpr=1.5" alt=" 2018 Toyota Camry Hybrid">
+                    <p class="2018_Toyota_Camry_Hybridp">The 2018 Toyota Camry Hybrid is a vehicle that is established through its solid driving dynamics high-reliability ratings. 
+                        As well it represents an edgier and sportier look. Some reasons why this vehicle has  good value and purchase is its hybrid powertrain, 
+                        composed ride and handling, and an exceptional safety score...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="The_2017_Toyota_86">
+                <h3 class="h33">The 2017 Toyota 86</h3>
+                <div class="The_2017_Toyota_86_MAIN">
+                    <img class="The_2017_Toyota_86img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/2017Toyota86002.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="The 2017 Toyota 86">
+                    <p class="The_2017_Toyota_86p">Describing the way a 2017 Toyota 86 drives is unique as this vehicle moves like jagger. The handling is robust and the steering is distinct.
+                        Looking at more technical elements of the vehicle, according to Driving, "The instrumentation is basic and performance-focused.
+                        The tachometer moves to the center spot with its 7,000 rpm redline at 12 o’clock and the speedometer sits to the left."..... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2019_Toyota_4Runner">
+                <h3 class="h32">2019 Toyota 4Runner</h3>
+                <div class="2019_Toyota_4Runner_MAIN">
+                    <img class="2019_Toyota_4Runnerimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/IMG_1719_f37c92a5-318c-48cc-aa13-4bb1a2c0db3f-prv.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2019 Toyota 4Runner">
+                    <p class="2019_Toyota_4Runnerp">So what's good about the 2019 Toyota 4Runner? Well, for starters, it has a customizable Entune system,
+                         a gauge cluster offers scrolling info screen, off-road capability, and a 5,000- pound maximum towing capacity. With the Toyota 4Runner,  
+                         you are getting value for your money, comfort, 
+                        reliability, high-class performance, and more. It allows for smooth riding even on rougher surfaces which makes it a sturdy ride....... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2019_Toyota_GR_Supra">
+                <h3 class="h31">2019 Toyota GR Supra</h3>
+                <div class="2019_Toyota_GR_Supra_MAIN">
+                    <img class="2019_Toyota_GR_Supraimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/3304967.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="2019 Toyota GR Supra">
+                    <p class="2019_Toyota_GR_Suprap"> Last on our list but certainly, not least is the 2019 Toyota GR Supra. This vehicle has a history in Japanese car culture and is 
+                        comparable to the Honda NSX and Nissan GT-R according to Top Gear. 
+                        Being the owner of a 2019 Toyota GR Supra could very well be on your wish list since the design of the cockpit is high-end....... <a href="AC_CARS_maintoy.html">see more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="radio" class="por" value="POR" name="cr" id="POR" >
+    <div class="DPOR">
+
+    <h2>Porsche</h2>
+
+        <p class="PORP"> To start, we've got on of Porsche's latest and greatest creations: The Porsche Cayenne Turbo S-E Hybrid Coupe.
+             Although the name is sort of a mouthful, this hybrid Cayenne manages to impress, nonetheless.
+        <br> <br>
+        there is 10 of the best Porsche cars of these decade:
+        </p>
+
+        <div class="NIS10">
+
+            <div class="porsche_Cayenne_Turbo_S-E_Hybrid_Coupe">
+                <h3 class="h310">Porsche Cayenne Turbo S-E Hybrid Coupe</h3>
+                <div class="porsche_Cayenne_Turbo_S-E_Hybrid_Coupe_MAIN">
+                    <img class="porsche_Cayenne_Turbo_S-E_Hybrid_Coupeimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/P19_0607_a3_rgb-1280x720.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Porsche Cayenne Turbo S-E Hybrid Coupe">
+                    <p class="porsche_Cayenne_Turbo_S-E_Hybrid_Coupep"> To start, we've got on of Porsche's latest and greatest creations: The Porsche Cayenne Turbo S-E Hybrid Coupe. 
+                        Although the name is sort of a mouthful, this hybrid Cayenne manages to impress, nonetheless....... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="porsche_911_Carrera_S_(992)">
+                <h3 class="h39">Porsche 911 Carrera S (992)</h3>
+                <div class="porsche_911_Carrera_S_(992)_MAIN">
+                    <img class="porsche_911_Carrera_S_(992)img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/porsche-911-carrera-s-992.jpg?q=50&fit=crop&w=750&dpr=1.5" alt=" Porsche 911 Carrera S (992)">
+                    <p class="porsche_911_Carrera_S_(992)p">Of course, if you're going to talk about Porsche's latest and greatest models, 
+                        you would have to be crazy to forget the beloved 911 Carrera. More specifically, though, the brand new 2020 992-body 911 Carrera S....... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="porsche_panamera_Turbo">
+                <h3 class="h38">Porsche Panamera Turbo</h3>
+                <div class="porsche_panamera_Turbo_MAIN">
+                    <img class="porsche_panamera_Turboimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/2018-porsche-panamera-turbo-s-e-hybrid-review.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Porsche Panamera Turbo">
+                    <p class="porsche_panamera_Turbop">When the average consumer thinks about the Porsche brand, a few things probably come to mind in that instance: Images of expensive, 
+                        well-tuned sports cars that can barely hold two people. This is true, for the most part, but not the only thing Porsche is great at...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="Porsche_911_Speedster">
+                <h3 class="h37">Porsche 911 Speedster</h3>
+                <div class="Porsche_911_Speedster_MAIN">
+                    <img class="Porsche_911_Speedsterimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/p19-0438-a3-rgb-1555430664.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Porsche 911 Speedster">
+                    <p class="porsche_911_Speedsterp">Sometimes, the best way to take two-steps forward is by taking a single-step backwards. Apparently,
+                         this is what Porsche executives thought when they brought back the 911 Speedster just a year ago. Since the early days of Porsche and the 911 body style,
+                         convertibles and Speedster alternatives were a big part of the Carrera's lineup....... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="porsche_919_Hybrid_Evo">
+                <h3 class="h36">Porsche 919 Hybrid Evo</h3>
+                <div class="porsche_919_Hybrid_Evo_MAIN">
+                    <img class="porsche_919_Hybrid_Evoimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/porsche-top-5-lead-image-919-hybrid-evo.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="porsche 919 Hybrid Evo">
+                    <p class="porsche_919_Hybrid_Evop"> Shortly after Porsche dominated the W.E.C. (World Endurance Championship)
+                         with their LMP1 car, the 919 Hybrid, Porsche thought "what would this car be capable of without F.I.A. restrictions?" Luckily for us,
+                         they went through with it; creating the 919 Hybrid Evo...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="porsche_Turbo_S_(991)">
+                <h3 class="h35">Porsche Turbo S (991)</h3>
+                <div class="porsche_Turbo_S_(991)_MAIN">
+                    <img class="porsche_Turbo_S_(991)img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/porsche_911_turbo_s_coupe_20.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Porsche Turbo S (991)">
+                    <p class="porsche_Turbo_S_(991)p"> When Porsche made their 991-body Porsche Turbo S, just about everyone expected it to be a quick car.
+                         Yet, very few anticipated just how fast it was, chiefly involving acceleration from 0 to 60. With a 3.8-liter, twin-turbocharged, flat-six, all-wheel drive,
+                         and a curb-weight of just over 3,000 pounds, the 991 Turbo S became on of the world's fastest cars from 0 to 60...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="2016_porsche_911R">
+                <h3 class="h34"> 2016 Porsche 911R</h3>
+                <div class="2016_porsche_911R_MAIN">
+                    <img class="2016_porsche_911Rimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/porscher-004.jpg?q=50&fit=crop&w=750&dpr=1.5" alt=" 2016 Porsche 911R">
+                    <p class="2016_porsche_911Rp">As technology advances over the years, older, less-efficient tools and parts are swapped out in favor of the updated modern
+                         version. Where this' been rampant in the car community is with manual transmissions; getting fazed out faster and faster. However,
+                         Porsche knows their customer base and knew that there would be thousands who still wanted the classic three-pedal setup. As such, the 911R was born...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="porsche_GT2_RS">
+                <h3 class="h33">Porsche GT2 RS</h3>
+                <div class="porsche_GT2_RS_MAIN">
+                    <img class="porsche_GT2_RSimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/high_911_gt2_rs_world_record_nucc88rburgring_2017_porsche_ag-1.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Porsche GT2 RS">
+                    <p class="porsche_GT2_RSp">After Porsche's resounding success with their GT3/GT3 RS reboot (991),
+                         it was only a matter of time before the German powerhouse brought back another RS-model: The 991 Porsche GT2 RS...... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="porsche_918_Hybrid">
+                <h3 class="h32">Porsche 918 Hybrid</h3>
+                <div class="porsche_918_Hybrid_MAIN">
+                    <img class="porsche_918_Hybridimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/porsche_918_1_biggalleryimage.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Porsche 918 Hybrid">
+                    <p class="porsche_918_Hybridp">Some of you may have been wondering, "Where's the 918 on this list?" Well, the wait is over.
+                         Introducing Porsche's most successful, and powerful, hybrid to date: The Porsche 918 Hybrid.
+                     The 918 Hybrid is a member of what's been dubbed the 'Holy Trinity:' a combination of the Ferrari LaFerrari, McLaren P1,
+                     and Porsche 918. These three cars are the crème de la crème of the hypercar category; often sporting over 1000 horsepower and a hybrid system.
+                     Compared to the others, 
+                     the 918 Hybrid is the cheapest (~$850,000) and most efficient when staying in all-electric mode. 
+                     It's also the fastest from zero to sixty!....... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="porsche_GT3_RS_(991.2)">
+                <h3 class="h31">Porsche GT3 RS (991.2)</h3>
+                <div class="porsche_GT3_RS_(991.2)_MAIN">
+                    <img class="porsche_GT3_RS_(991.2)img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/porsche911gt3rs_08.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Porsche GT3 RS (991.2)">
+                    <p class="porsche_GT3_RS_(991.2)p"> Last up, but certainly not least, is Porsche's latest supercar. No, it's not the 992 Carrera, 935, or 918 Hybrid,
+                         but rather the upgraded/updated Porsche GT3RS 991.2-body style. Of all of Porsche's current lineup, the GT3 RS s easily one of the most extreme-looking out of the bunch.
+                         The GT3 RS is powered by the large 4.0-liter flat-six (Naturally aspirated) that can pump out around 550 horsepower....... <a href="uc.html">see more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </form>
+
+</div>
+
+        
+    </div>
+</div>
+
+
+
+<span id="up" class="up" > ↑ <span>
+
+
+    </div>
+
+<script>
+
+document.getElementById("lBMW").style.color = "black"
+document.getElementById("lMAR").style.color = "black"
+document.getElementById("lNIS").style.color = "black"
+document.getElementById("lTOY").style.color = "black"
+document.getElementById("lPOR").style.color = "black"
+
+function colorB() {
+    if(document.getElementById("lBMW").style.color == "red"){
+    document.getElementById("lBMW").style.color = "black";
+    }else if(document.getElementById("lBMW").style.color === "black"){
+    document.getElementById("lBMW").style.color = "red";
+}
+    else if(document.getElementById("lBMW").style.color === "white"){
+    document.getElementById("lBMW").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lBMW").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lBMW").style.color = "white";
+}
+}
+function colorM() {
+    if(document.getElementById("lMAR").style.color == "red"){
+    document.getElementById("lMAR").style.color = "black";
+    }else if(document.getElementById("lMAR").style.color === "black"){
+    document.getElementById("lMAR").style.color = "red";
+}
+    else if(document.getElementById("lMAR").style.color === "white"){
+    document.getElementById("lMAR").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lMAR").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lMAR").style.color = "white";
+}
+}
+function colorT() {
+    if(document.getElementById("lTOY").style.color == "red"){
+    document.getElementById("lTOY").style.color = "black";
+    }else if(document.getElementById("lTOY").style.color === "black"){
+    document.getElementById("lTOY").style.color = "red";
+}
+    else if(document.getElementById("lTOY").style.color === "white"){
+    document.getElementById("lTOY").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lTOY").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lTOY").style.color = "white";
+}
+}
+function colorN() {
+    if(document.getElementById("lNIS").style.color == "red"){
+    document.getElementById("lNIS").style.color = "black";
+    }else if(document.getElementById("lNIS").style.color === "black"){
+    document.getElementById("lNIS").style.color = "red";
+}
+    else if(document.getElementById("lNIS").style.color === "white"){
+    document.getElementById("lNIS").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lNIS").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lNIS").style.color = "white";
+}
+}
+function colorP() {
+    if(document.getElementById("lPOR").style.color == "red"){
+    document.getElementById("lPOR").style.color = "black";
+    }else if(document.getElementById("lPOR").style.color === "black"){
+    document.getElementById("lPOR").style.color = "red";
+}
+    else if(document.getElementById("lPOR").style.color === "white"){
+    document.getElementById("lPOR").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lPOR").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lPOR").style.color = "white";
+}
+}
+
+function td(){
+    if(document.getElementById("lBMW").style.color == "black"){
+    document.getElementById("lBMW").style.color = "white";
+    }else if(document.getElementById("lBMW").style.color === "white"){
+    document.getElementById("lBMW").style.color = "black";
+    }
+    else if(document.getElementById("lBMW").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lBMW").style.color = "red";
+    }
+    else if(document.getElementById("lBMW").style.color === "red"){
+    document.getElementById("lBMW").style.color = "rgb(247, 48, 48)";
+    }
+
+    if(document.getElementById("lMAR").style.color == "black"){
+    document.getElementById("lMAR").style.color = "white";
+    }else if(document.getElementById("lMAR").style.color === "white"){
+    document.getElementById("lMAR").style.color = "black";
+    }else if(document.getElementById("lMAR").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lMAR").style.color = "red";
+    }
+    else if(document.getElementById("lMAR").style.color === "red"){
+    document.getElementById("lMAR").style.color = "rgb(247, 48, 48)";
+    }
+
+    if(document.getElementById("lNIS").style.color == "black"){
+    document.getElementById("lNIS").style.color = "white";
+    }else if(document.getElementById("lNIS").style.color === "white"){
+    document.getElementById("lNIS").style.color = "black";
+    }else if(document.getElementById("lNIS").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lNIS").style.color = "red";
+    }
+    else if(document.getElementById("lNIS").style.color === "red"){
+    document.getElementById("lNIS").style.color = "rgb(247, 48, 48)";
+    }
+
+
+    if(document.getElementById("lTOY").style.color == "black"){
+    document.getElementById("lTOY").style.color = "white";
+    }else if(document.getElementById("lTOY").style.color === "white"){
+    document.getElementById("lTOY").style.color = "black";
+    }else if(document.getElementById("lTOY").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lTOY").style.color = "red";
+    }
+    else if(document.getElementById("lTOY").style.color === "red"){
+    document.getElementById("lTOY").style.color = "rgb(247, 48, 48)";
+    }
+
+    if(document.getElementById("lPOR").style.color == "black"){
+    document.getElementById("lPOR").style.color = "white";
+    }else if(document.getElementById("lPOR").style.color === "white"){
+    document.getElementById("lPOR").style.color = "black";
+    }else if(document.getElementById("lPOR").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lPOR").style.color = "red";
+    }
+    else if(document.getElementById("lPOR").style.color === "red"){
+    document.getElementById("lPOR").style.color = "rgb(247, 48, 48)";
+    }
+}
+
+
+var b1 = document.getElementById("BMW");
+var b2 = document.getElementById("MAR");
+var b3 = document.getElementById("TOY");
+var b4 = document.getElementById("NIS");
+var b5 = document.getElementById("POR");
+
+
+
+   function toggle(){
+    if (document.getElementById("CDARK").checked === false){
+    b1.checked = !b1.checked;
+    document.getElementById("lMAR").style.color = "black";
+    document.getElementById("lNIS").style.color = "black";
+    document.getElementById("lTOY").style.color = "black";
+    document.getElementById("lPOR").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b1.checked = !b1.checked;
+    document.getElementById("lMAR").style.color = "white";
+    document.getElementById("lNIS").style.color = "white";
+    document.getElementById("lTOY").style.color = "white";
+    document.getElementById("lPOR").style.color = "white";
+   }
+}
+
+   function togglem(){
+    if (document.getElementById("CDARK").checked === false){
+    b2.checked = !b2.checked;
+    document.getElementById("lBMW").style.color = "black";
+    document.getElementById("lNIS").style.color = "black";
+    document.getElementById("lTOY").style.color = "black";
+    document.getElementById("lPOR").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b2.checked = !b2.checked;
+    document.getElementById("lBMW").style.color = "white";
+    document.getElementById("lNIS").style.color = "white";
+    document.getElementById("lTOY").style.color = "white";
+    document.getElementById("lPOR").style.color = "white";
+    }
+   }  
+
+   function togglet(){
+    if (document.getElementById("CDARK").checked === false){
+    b3.checked = !b3.checked;
+    document.getElementById("lMAR").style.color = "black";
+    document.getElementById("lNIS").style.color = "black";
+    document.getElementById("lBMW").style.color = "black";
+    document.getElementById("lPOR").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b3.checked = !b3.checked;
+    document.getElementById("lMAR").style.color = "white";
+    document.getElementById("lNIS").style.color = "white";
+    document.getElementById("lBMW").style.color = "white";
+    document.getElementById("lPOR").style.color = "white";
+    }
+   }  
+
+   function togglen(){
+    if (document.getElementById("CDARK").checked === false){
+    b4.checked = !b4.checked;
+    document.getElementById("lMAR").style.color = "black";
+    document.getElementById("lBMW").style.color = "black";
+    document.getElementById("lTOY").style.color = "black";
+    document.getElementById("lPOR").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b4.checked = !b4.checked;
+    document.getElementById("lMAR").style.color = "white";
+    document.getElementById("lBMW").style.color = "white";
+    document.getElementById("lTOY").style.color = "white";
+    document.getElementById("lPOR").style.color = "white";
+    }
+   }  
+
+   function togglep(){
+    if (document.getElementById("CDARK").checked === false){
+    b5.checked = !b5.checked;
+    document.getElementById("lMAR").style.color = "black";
+    document.getElementById("lNIS").style.color = "black";
+    document.getElementById("lTOY").style.color = "black";
+    document.getElementById("lBMW").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b5.checked = !b5.checked;
+    document.getElementById("lMAR").style.color = "white";
+    document.getElementById("lNIS").style.color = "white";
+    document.getElementById("lTOY").style.color = "white";
+    document.getElementById("lBMW").style.color = "white";
+   }
+   }  
+
+   let up = document.getElementById("up");
+
+up.onclick = function(){
+
+    window.scrollTo({
+
+        top : 0,
+
+        behavior : "smooth"
+        
+    })
+}
+
+up.style.display = 'none';
+
+
+
+
+window.onscroll = function(){ 
+    
+    let ws = window.scrollY;
+    
+    if(ws < 200){
+
+        up.style = `display : none`;
+
+}else {
+    
+    up.setAttribute("style" , `
+    display : inline;
+    transition-duration: 3s; 
+     ` )
+   
+}
+}
+
+
+
+
+</script>
+
+
+
+</body>
+
