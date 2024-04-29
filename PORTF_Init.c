@@ -11,4 +11,4 @@ GPIO_PORTF_DIR_R |= PF123_mask; // enable pins 1,2,3 to be output
 GPIO_PORTF_DEN_R |= PF123_mask; // enable pins 1,2,3 to be digital 
 GPIO_PORTF_DATA_R &= ~ PF123_mask;// make leds off
 }
-//hussien
+//hussien id 2100274
