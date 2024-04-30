@@ -1,0 +1,38 @@
+#include "tm4c123gh6pm.h"
+#define entter 0x0D
+#include <stdio.h>
+#include <string.h>
+#include "init_portA_pin01.c"
+#include "getstring.c"
+#include "PORTB_Init.c"
+#include "PORTF_Init.c"
+#include "SW_Init.c"
+#include "SYSTIC_TIMER_Init.c"
+char distance;
+
+int unsigned switch_interface(){
+return (GPIO_PORTF_DATA_R & 0x10);
+}
+
+void updateled(unsigned int led){
+	GPIO_PORTF_DATA_R=led;
+}
+
+int main(){
+PORTB_Init();
+PORTF_Init();
+SW_Init();
+SYSTIC_TIMER_Init();
+init_portA_pin01();
+init_uart();
+while(1){
+int unsigned xv = switch_interface();
+if (distance>=100 || xv==0x00)// if distance exceeds 100 or switch is pushed
+updateled(GREEN);
+
+else if(xv==0x10)
+updateled(RED);
+}
+}
+
+// ahmed ibrahim mohamed 2101038
