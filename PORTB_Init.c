@@ -11,4 +11,4 @@ GPIO_PORTB_DIR_R |= 0x0FF; // enable all pins to be output
 GPIO_PORTB_DEN_R |= 0x0FF; // enable all pins to be digital 
 GPIO_PORTB_DATA_R &= ~ 0x0FF;// make all pins off
 }
-//abdelrahman
+//abdelrahman/2100544
