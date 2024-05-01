@@ -11,4 +11,5 @@ GPIO_PORTA_DIR_R |= 0x02; // enable pin0 input,1 output
 GPIO_PORTA_DEN_R |= 0x03; // enable pin0,1 to be digital 
 GPIO_PORTA_DATA_R &= ~ 0x02;// make leds off
 }
-//hassan
+// Hassan Ramadan Zaref
+// 2101364
