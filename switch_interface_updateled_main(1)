@@ -29,9 +29,6 @@ while(1){
 int unsigned xv = switch_interface();
 if (distance>=100 || xv==0x00)// if distance exceeds 100 or switch is pushed
 updateled(GREEN);
-
-else if(xv==0x10)
-updateled(RED);
 }
 }
 
