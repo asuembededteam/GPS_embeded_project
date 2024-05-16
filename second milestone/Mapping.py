@@ -45,7 +45,7 @@ with open(file_name, "a") as file:
             if not data:
                 continue
             else:
-                print("Total Distance is ", float(data) * 1000)
+                print("Total Distance is ", float(data) / 100)
 
 file.close() 
 
