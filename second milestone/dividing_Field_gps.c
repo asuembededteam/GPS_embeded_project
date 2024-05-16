@@ -1,3 +1,4 @@
+//Omar mohamed araby shamandy 2100550
 /////// dividing gps module output into fields
 #include "Variables &Functions Prototypes.c"
 #include "Distance_Manipulation.c"
