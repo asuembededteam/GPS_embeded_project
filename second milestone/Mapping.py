@@ -1,4 +1,4 @@
-"""import serial
+import serial
 
 # Open serial port for UART communication
 ser = serial.Serial("COM3", 9600, timeout=1)  # Change 'COM3' to your UART port
@@ -47,7 +47,7 @@ with open(file_name, "a") as file:
             else:
                 print("Total Distance is ", float(data) * 1000)
 
-file.close() """
+file.close() 
 
 # %%
 import folium
@@ -90,3 +90,5 @@ for loc in locations:
 m
 
 # %%
+
+# Hassan Ramadan Zaref 2101364
