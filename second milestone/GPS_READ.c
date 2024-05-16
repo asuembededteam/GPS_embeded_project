@@ -30,4 +30,4 @@ recieved = read();
 gpsmoduleoutput[fillcount++]=recieved;
 }while(recieved !=star);
 }
-	
+// Hassan Ramadan Zaref 2101364	
